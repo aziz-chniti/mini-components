@@ -1,0 +1,59 @@
+:root {
+      --bg: #0d1117;
+      --input-bg: #161b22;
+      --border: #30363d;
+      --accent: #00bcd4;
+      --text: #ffffff;
+      --radius: 10px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Poppins", sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .otp-wrapper {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+    }
+
+    .otp-input {
+      width: clamp(40px, 9vw, 60px);
+      height: clamp(48px, 10vw, 65px);
+      text-align: center;
+      font-size: clamp(1rem, 3vw, 1.5rem);
+      font-weight: 600;
+      color: var(--text);
+      background: var(--input-bg);
+      border: 2px solid var(--border);
+      border-radius: var(--radius);
+      outline: none;
+      transition: 0.2s ease;
+      box-shadow: #00000036 0px 8px 10px;
+    }
+
+    .otp-input:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 10px var(--accent);
+      transform: scale(1.05);
+    }
+
+    .otp-input.filled {
+      border-color: var(--accent);
+      background-color: #0f141a;
+    }
+
+    @media (max-width: 400px) {
+      .otp-wrapper {
+        gap: 10px;
+      }
+    }
